@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `hillsofcode`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Hill Onyechekwa`,
+      summary: `Frontend engineer and acclaimed web illusionist living in Lagos, Nigeria.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `Hillsofcode is techcnical blog about cool frontend developement things like web animation, Javascript, the JAMstack and more.`,
+    siteUrl: `https://hillsofcode.netlify.app/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `nwatechHill`,
     },
   },
   plugins: [
@@ -121,7 +121,7 @@ module.exports = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/hoc-icon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-react-helmet`,
