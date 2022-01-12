@@ -1,12 +1,12 @@
-import * as React from 'react'
-import Layout from '../components/layout'
+import * as React from 'react';
+import Layout from '../components/layout';
 
 const Podcast = () => {
     return(
         <Layout>
-            <main></main>
+            <h1>Podcast</h1>
         </Layout>
     )
 }
 
-export default Podcast
+export default Podcast;
