@@ -8,7 +8,7 @@ function Nav({title}) {
             <ul className="nav-links">
                 <li><Link to="/about">About</Link></li>
                 <li><a href="//buymeacoffee.com/hillonyechekwa">Buymeacoffee</a></li>
-                <li><Link to="#">Podcast</Link></li>
+                <li><Link to="/podcast">Podcast</Link></li>
             </ul>
         </nav>
     );
