@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Ads from "../components/ads"
+// import Ads from "../components/ads"
 import Newsletter from "../components/newsletter"
 
 const BlogIndex = ({ data, location }) => {
@@ -67,7 +67,7 @@ const BlogIndex = ({ data, location }) => {
           )
         })}
       </ul>
-      <Ads />
+      {/* <Ads /> */}
       <Newsletter />
     </Layout>
   )
