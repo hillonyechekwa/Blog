@@ -287,6 +287,7 @@ a:focus {
   margin-top: var(--spacing-0);
   --color-heading: var(--secondary);
   color: var(--color-heading);
+  /* width: 300px; */
   position: relative;
   /* z-index: 2; */
 }
@@ -297,7 +298,7 @@ a:focus {
 }
 
 .post-list-item h2:hover::before{
-  transform: scaleX(.5);
+  transform: scaleX(.7);
   transform-origin: bottom left;
 }
 

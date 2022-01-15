@@ -1,6 +1,9 @@
 ---
+title: "Blueberry Pancakes"
 path: blueberry-pancakes
 date: 2022-01-13T13:52:55.970Z
+description: "all the best things about blueberry pancakes"
+tags: ["blueberry-pancakes"]
 ---
 # Blueberry Pancakes Are Really Amazing
 Blueberry pancakes are the best kind of pancakes even though, I think vanilla
