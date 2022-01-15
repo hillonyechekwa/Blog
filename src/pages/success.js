@@ -9,4 +9,4 @@ const Success = ({location}) => {
     )
 }
 
-export default success
+export default Success
