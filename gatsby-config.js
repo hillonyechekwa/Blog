@@ -13,10 +13,11 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-image`,
+    `gatsby-plugin-netlify-cms`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog`,
+        path: `${__dirname}/blog`,
         name: `blog`,
       },
     },
@@ -123,6 +124,22 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/hoc-icon.png`, // This path is relative to the root of the site.
       },
+    },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          "298037574",
+        ],
+        gtagConfig: {
+          optimize_id: "OPT-KC53LRR",
+          anonymize_ip: true,
+          cookie_expiers: 0,
+        },
+        pluginConfig: {
+          head: false,
+        }
+      }
     },
     `gatsby-plugin-react-helmet`,
     // this (optional) plugin enables Progressive Web App + Offline functionality

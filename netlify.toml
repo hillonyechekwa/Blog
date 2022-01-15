@@ -6,4 +6,6 @@
     command="gatsby develop"
 
 
-    
+[functions]    
+    directory="functions"
+
