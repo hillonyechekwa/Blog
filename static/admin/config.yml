@@ -1,7 +1,7 @@
 backend: 
-  name: test-repo
-  # repo: hillonyechekwa/blog
-  # branch: main
+  name: github
+  repo: hillonyechekwa/blog
+  branch: main
 
 media_folder: static/assets
 public_folder: /assets
