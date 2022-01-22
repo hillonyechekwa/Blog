@@ -1,6 +1,7 @@
 import * as React from "react"
 import {useState} from "react"
 import { Link, graphql } from "gatsby"
+import Search from '../components/search'
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -29,8 +30,9 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="All posts" />
+      <Search />
       <p className="site-description">{siteDescription}</p>
-      <ul style={{ listStyle: `none` }}>
+      <ul style={{ listStyle: `none` }} className="home">
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
 

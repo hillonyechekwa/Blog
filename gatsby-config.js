@@ -4,16 +4,45 @@ module.exports = {
     author: {
       name: `Hill Onyechekwa`,
       summary: `Frontend engineer and acclaimed web illusionist living in Lagos, Nigeria.`,
+      fullsummary: `Hill Onyechekwa is a frontend engineer, acclaimed web illusionist, technical content creator and tutor living and working in Lagos, Nigeria`,
     },
     description: `Hillsofcode is techcnical blog about cool frontend developement things like web animation, Javascript, the JAMstack and more.`,
     siteUrl: `https://hillsofcode.netlify.app/`,
     social: {
-      twitter: `nwatechHill`,
+      twitter: `madeofhill`,
     },
   },
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-plugin-netlify-cms`,
+    {
+      resolve: `gatsby-plugin-local-search`,
+      options: {
+        name: `posts`,
+        engine: `flexsearch`,
+        engineOptions: `speed`,
+        query:`{
+          allMarkdownRemark{
+            nodes{
+              id
+              frontmatter{
+                title
+                tags
+              }
+            }
+          }
+        }`,
+        ref: `id`,
+        index: [`title`, `tags`, `description`],
+        normalizer: ({data}) => {
+          data.allMarkdownRemark.nodes.map((node)=>({
+            id: node.id,
+            title: node.frontmatter.title,
+            tags: node.frontmatter.tags,
+          }))
+        }
+      }     
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

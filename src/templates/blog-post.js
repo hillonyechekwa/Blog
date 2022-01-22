@@ -20,13 +20,18 @@ const BlogPostTemplate = ({ data, location }) => {
         itemScope
         itemType="http://schema.org/Article"
       >
-        <header>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
+        <header className="post-header">
+          <h1 itemProp="headline" id="post-title">{post.frontmatter.title}</h1>
+          <small id="post-description">{post.frontmatter.description}</small>
+          <ul id="post-info">
+            <li>{post.frontmatter.date}</li>
+            <li>{post.frontmatter.tags}</li>
+          </ul>
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
+          className="post-body"
         />
       </article>
       <nav className="blog-post-nav">
@@ -80,6 +85,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        tags
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {

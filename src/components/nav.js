@@ -2,6 +2,7 @@ import * as React from 'react';
 import {Link} from 'gatsby'
 
 function Nav({title}) {
+
     return (
         <nav className="nav">
             {title}
