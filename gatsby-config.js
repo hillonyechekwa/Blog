@@ -15,34 +15,34 @@ module.exports = {
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-plugin-netlify-cms`,
-    {
-      resolve: `gatsby-plugin-local-search`,
-      options: {
-        name: `posts`,
-        engine: `flexsearch`,
-        engineOptions: `speed`,
-        query:`{
-          allMarkdownRemark{
-            nodes{
-              id
-              frontmatter{
-                title
-                tags
-              }
-            }
-          }
-        }`,
-        ref: `id`,
-        index: [`title`, `tags`, `description`],
-        normalizer: ({data}) => {
-          data.allMarkdownRemark.nodes.map((node)=>({
-            id: node.id,
-            title: node.frontmatter.title,
-            tags: node.frontmatter.tags,
-          }))
-        }
-      }     
-    },
+    // {
+    //   resolve: `gatsby-plugin-local-search`,
+    //   options: {
+    //     name: `posts`,
+    //     engine: `flexsearch`,
+    //     engineOptions: `speed`,
+    //     query:`{
+    //       allMarkdownRemark{
+    //         nodes{
+    //           id
+    //           frontmatter{
+    //             title
+    //             tags
+    //           }
+    //         }
+    //       }
+    //     }`,
+    //     ref: `id`,
+    //     index: [`title`, `tags`, `description`],
+    //     normalizer: ({data}) => {
+    //       data.allMarkdownRemark.nodes.map((node)=>({
+    //         id: node.id,
+    //         title: node.frontmatter.title,
+    //         tags: node.frontmatter.tags,
+    //       }))
+    //     }
+    //   }     
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
