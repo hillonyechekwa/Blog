@@ -10,11 +10,15 @@ collections:
   label: "Blog"
   folder: "/blog"
   create: true
-  slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+  slug: {{title}}
+  media_folder: ''
+  public_folder: ''
+  editor: 
+    preview: false
+  
   fields: 
       - {name: title, label: Title, widget: string}
-      - {name: description, label: Description}
-      - {name: tags, label: Tags, widget: tags}
-      - {name: layout, label: Layout, widget: hidden, default: blog}
-      - {name: date, label: Date, widget: datetime}
+      - {name: description, label: Description, widger: string}
+      - {name: tags, label: Tags, widget: list}
+      - {name: date, label: 'Publish Date', widget: datetime}
       - {name: body, label: Body, widget: markdown}
